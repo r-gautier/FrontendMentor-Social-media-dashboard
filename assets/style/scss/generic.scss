@@ -1,0 +1,191 @@
+@import "_variables";
+
+html {
+  height: 100%;
+  background-color: $very-dark-blue;
+}
+body {
+  margin: auto;
+}
+
+.page-content {
+  padding: 50px 10%;
+
+  font-size: $font-size;
+  font-weight: $font-weight-normal;
+  font-family: $font-family;
+  color: $white;
+
+  .top-page-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 100px;
+
+    font-weight: $font-weight-bold;
+
+    .top-page-title-and-subtitle-container {
+      .top-page-title {
+        font-size: 2em;
+
+        margin-bottom: 10px;
+      }
+
+      .top-page-subtitle {
+        font-size: 1em;
+        color: $desaturated-blue;
+      }
+    }
+
+    .top-banner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 300px;
+      width: 100%;
+      z-index: -1;
+
+      background-color: $very-dark-blue-secondary;
+    }
+  }
+
+  .social-network-account-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+    grid-gap: 25px 30px;
+
+    margin-bottom: 50px;
+
+    .social-network-account-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      padding: 25px 65px;
+
+      background-color: $dark-desaturated-blue;
+
+      border-top: solid;
+      border-top-width: 4px;
+      -webkit-border-radius: 5px;
+      &.facebook {
+        border-color: $facebook-color;
+      }
+      &.twitter {
+        border-color: $twitter-color;
+      }
+      &.instagram {
+        border-image: $instagram-gradient;
+        border-image-slice: 1;
+      }
+      &.youtube {
+        border-color: $youtube-color;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .account-pseudo {
+        color: $desaturated-blue;
+        margin-bottom: 30px;
+      }
+      .account-followers {
+        margin-bottom: 30px;
+
+        text-align: center;
+
+        .followers-count {
+          font-size: 3em;
+          font-weight: $font-weight-bold;
+        }
+        .followers-naming {
+          font-size: 0.75em;
+          letter-spacing: 0.5em;
+          color: $desaturated-blue;
+
+          text-transform: uppercase;
+        }
+      }
+      .account-growth {
+        font-size: 0.75em;
+        font-weight: $font-weight-bold;
+        letter-spacing: 0.25em;
+        &.green {
+          color: $lime-green;
+        }
+        &.red {
+          color: $bright-red;
+        }
+      }
+    }
+  }
+
+  .social-network-overview-container {
+    margin-bottom: 50px;
+
+    .social-network-overview-title {
+      font-size: 1.5em;
+      font-weight: $font-weight-bold;
+
+      margin-bottom: 30px;
+    }
+
+    .social-network-overview-cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+      grid-gap: 25px 30px;
+
+      .social-network-overview-card {
+        background-color: $dark-desaturated-blue;
+
+        border-radius: 5px;
+
+        padding: 25px;
+
+        .overview-card-title {
+          font-weight: $font-weight-bold;
+          color: $desaturated-blue;
+
+          margin-bottom: 30px;
+        }
+
+        .overview-figures {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+
+          .overview-total {
+            font-size: 2em;
+            font-weight: $font-weight-bold;
+            vertical-align: text-bottom;
+            //TODO: remove and correct this hack
+            line-height: 0.9;
+          }
+
+          .overview-growth {
+            font-size: 0.75em;
+            font-weight: $font-weight-bold;
+            letter-spacing: 0.25em;
+            vertical-align: text-bottom;
+
+            &.green {
+              color: $lime-green;
+            }
+            &.red {
+              color: $bright-red;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .attribution {
+    display: flex;
+    justify-content: flex-end;
+
+    color: $desaturated-blue;
+  }
+}
