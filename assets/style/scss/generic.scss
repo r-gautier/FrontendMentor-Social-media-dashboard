@@ -8,12 +8,59 @@ body {
   margin: auto;
 }
 
+i {
+  font-style: normal;
+}
+
+.facebook-color {
+  color: $facebook-color;
+}
+
+.instagram-color {
+  background-image: $instagram-gradient;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.twitter-color {
+  color: $twitter-color;
+}
+
+.youtube-color {
+  color: $youtube-color;
+}
+
+.social-network-icon {
+  font-size: 2em;
+  margin-right: 10px;
+
+  &.youtube-color {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1em;
+    width: 1em;
+    background-color: $youtube-color;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+
+    .fa {
+      color: black;
+      font-size: 0.6em;
+    }
+  }
+}
+
 .page-content {
   padding: 50px 10%;
 
   font-size: $font-size;
   font-weight: $font-weight-normal;
   font-family: $font-family;
+  font-style: $font-style;
   color: $white;
 
   .top-page-content {
@@ -88,9 +135,13 @@ body {
       }
 
       .account-pseudo {
+        display: flex;
+        align-items: center;
+
         color: $desaturated-blue;
         margin-bottom: 30px;
       }
+
       .account-followers {
         margin-bottom: 30px;
 
@@ -145,10 +196,16 @@ body {
         padding: 25px;
 
         .overview-card-title {
-          font-weight: $font-weight-bold;
-          color: $desaturated-blue;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
 
           margin-bottom: 30px;
+
+          .overview-card-title-text {
+            font-weight: $font-weight-bold;
+            color: $desaturated-blue;
+          }
         }
 
         .overview-figures {
